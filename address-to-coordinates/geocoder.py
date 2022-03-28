@@ -1,10 +1,12 @@
 import googlemaps
-import configparser
-from datetime import datetime
 
 class Geocoder:
     def __init__(self, key):
         self.gmaps = googlemaps.Client(key=key)
 
-    def encode(self, address, region=None, components=None):
-        return self.gmaps.geocode(address)
+    def geocode_addresses(self, addresses):
+        coordinates = []
+        for address in addresses:
+            coordinates += self.gmaps.geocode(address)
+        
+        return coordinates # This will probably be a result dict, not raw coordinates
