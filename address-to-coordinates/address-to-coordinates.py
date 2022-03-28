@@ -21,9 +21,8 @@ def main():
         addresses = locations
     
     coordinates = geocoder.geocode_addresses(addresses)
-
     print(coordinates)
-    return 0
+    return coordinates
     
 
 
@@ -40,8 +39,7 @@ def parse_args():
     args = parser.parse_args()
 
     if args.filename and args.location:
-        # throw error
-        pass
+        raise ValueError("Can't use filename flag AND manually input an individual location")
     
     return args
 

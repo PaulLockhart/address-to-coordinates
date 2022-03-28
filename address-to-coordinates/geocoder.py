@@ -7,6 +7,9 @@ class Geocoder:
     def geocode_addresses(self, addresses):
         coordinates = []
         for address in addresses:
-            coordinates += self.gmaps.geocode(address)
+            coordinates.append(self.parse_response(self.gmaps.geocode(address)))
         
-        return coordinates # This will probably be a result dict, not raw coordinates
+        return coordinates
+    
+    def parse_response(self, response_dict):
+        return (response_dict[0]["geometry"]["location"]["lat"], response_dict[0]["geometry"]["location"]["lng"])
