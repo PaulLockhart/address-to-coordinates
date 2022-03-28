@@ -36,6 +36,7 @@ After these steps, you should be good to go!
                             confident your inputs are all only valid you can skip the validation and save time/api calls
 
 ### To run the program after setup:
+* If using a virtual environment, activate it with `$ source env/bin/activate`
 * To get the coordinates for a single location, type `$ python3 address-to-coordinates/address-to-coordinates.py location_to_check`
 * If you wish to supply a file, instead type `$ python3 address-to-coordinates/address-to-coordinates.py -f your_input_file.csv`
 	* Your input file should be a newline-delimited list of location strings (either valid addresses, or locations to search for), located in the parent folder (`address-to-coordinates`)
