@@ -10,7 +10,7 @@ Searches for a location and converts it to coordinates using the Google Maps pla
 * Create a copy of the example config file named config.ini
   * `$ cp docs/config.example.ini config.ini`
 * Replace the line \*INSERT API KEY HERE\* with your actual API key
-  * `$ sed -i 's/\\\*INSERT API KEY HERE\\\*/*actual_api_key*/g' config.ini`
+  * `$ sed -i 's/*INSERT API KEY HERE*/*actual_api_key*/g' config.ini`
 ### Install Dependencies
 * If desired, initialize a virtualenv for the file
   * `$ python3 -m venv env`
