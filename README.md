@@ -8,7 +8,7 @@ Searches for a location and converts it to coordinates using the Google Maps pla
 # First time setup
 ### Create a config.ini file
 * Create a copy of the example config file named config.ini
-  * `$ cp config.example.ini config.ini`
+  * `$ cp docs/config.example.ini config.ini`
 * Replace the line \*INSERT API KEY HERE\* with your actual API key
   * `$ sed -i 's/\\\*INSERT API KEY HERE\\\*/*actual_api_key*/g' config.ini`
 ### Install Dependencies
