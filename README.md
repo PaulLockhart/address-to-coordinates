@@ -38,7 +38,7 @@ After these steps, you should be good to go!
 ### To run the program after setup:
 * If using a virtual environment, activate it with `$ source env/bin/activate`
 * To get the coordinates for a single location, type `$ python3 address-to-coordinates/address-to-coordinates.py location_to_check`
-* If you wish to supply a file, instead type `$ python3 address-to-coordinates/address-to-coordinates.py -f your_input_file.csv`
-	* Your input file should be a newline-delimited list of location strings (either valid addresses, or locations to search for), located in the parent folder (`address-to-coordinates`)
-	* The first line of the CSV should have a name for the column, such as Addresses
-	* an example input CSV can be found in `address-to-coordinates/docs`
+* If you wish to supply a file, instead type `$ python3 address-to-coordinates/address-to-coordinates.py -f your_input_file.tsv`
+	* Your input file should be a newline-delimited .TSV list of location strings (either valid addresses, or locations to search for), located in the parent folder (`address-to-coordinates`)
+	* The first line of the TSV should have a name for the column, such as Addresses
+	* an example input TSV can be found in `address-to-coordinates/docs`
