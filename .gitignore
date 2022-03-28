@@ -130,3 +130,6 @@ dmypy.json
 
 # Config file
 config.ini
+
+# Ignore test/output csv files
+*.csv
