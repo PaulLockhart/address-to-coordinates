@@ -12,4 +12,12 @@ class Geocoder:
         return coordinates
     
     def parse_response(self, response_dict):
-        return (response_dict[0]["geometry"]["location"]["lat"], response_dict[0]["geometry"]["location"]["lng"])
+        county = "Could not find county"
+        state = "Could not find state"
+        for component in response_dict[0]['address_components']:
+            if "locality" in component['types']:
+                county = component["short_name"]
+            if "administrative_area_level_1" in component['types']:
+                state = component["short_name"]
+
+        return (county, state, response_dict[0]["geometry"]["location"]["lat"], response_dict[0]["geometry"]["location"]["lng"])
