@@ -132,4 +132,4 @@ dmypy.json
 config.ini
 
 # Ignore test/output csv files
-*.csv
+*.tsv

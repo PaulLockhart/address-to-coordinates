@@ -50,7 +50,7 @@ def parse_args():
 def load_locations_from_file(filename):
     res = []
     with open(filename, 'r') as file:
-        reader = csv.reader(file, delimiter=",")
+        reader = csv.reader(file, delimiter="\t")
         line_number = 0
         for row in reader:
             if line_number != 0:
@@ -60,9 +60,9 @@ def load_locations_from_file(filename):
 
 def write_coordinates_to_file(coordinates, filename):
     with open(filename, 'r') as input_file, \
-        open(filename[:-4] + "_results.csv", 'w') as output_file:
-        reader = csv.reader(input_file)
-        writer = csv.writer(output_file)
+        open(filename[:-4] + "_results.tsv", 'w') as output_file:
+        reader = csv.reader(input_file, delimiter="\t")
+        writer = csv.writer(output_file, delimiter="\t")
         line_number = 0
         for row in reader:
             if line_number == 0:
